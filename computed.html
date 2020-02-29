@@ -5,11 +5,19 @@
 
   <div class="container">
 <div id="app">
-
-<button v-on:click="artir"></button>
-
+<h4>çift fonksiyon</h4>
+<button type="button" class="btn btn-primary" v-on:click="artir">artır</button>
+<button type="button" class="btn btn-danger" v-on:click="azalt">azalt</button>
 <p>sayaç:{{counter}}</p>
 <p>sonuş:{{result}}</p>
+<hr>
+<h4>tek fonksiyon</h4>
+<button type="button" class="btn btn-primary" v-on:click="counter2++">artır</button>
+<button type="button" class="btn btn-danger" v-on:click="counter2--">azalt</button>
+
+<p>sayaç:{{counter2}}</p>
+<p>sonuş:{{result2()}} | {{output}}</p>
+
 </div>
 </div>
 
@@ -22,17 +30,51 @@ new Vue({
 data:{
 
 counter:0,
+counter2:0,
 result:""
 
 },
 methods:{
 
 artir:function() {
+  this.counter=this.counter+1;
   this.result=this.counter>10 ? "10 dan büyük" : "10 dan küçük"
+},
+
+azalt:function() {
+  this.counter=this.counter-1;
+  this.result=this.counter>10 ? "10 dan büyük" : "10 dan küçük"
+},
+
+result2:function() {
+  
+  return this.counter2>10 ? "10 dan büyük" : "10 dan küçük"
+},
+
+
+},
+
+
+computed:{
+
+output:function() {
+  console.log("calıştı");
+  return this.counter2>10 ? "10 dan büyük" : "10 dan küçük"
+}
+
+},
+
+watch: {
+
+counter:function(value) {
+
+console.log(value);
+
+}
+
 }
 
 
-}
 
 })
 
