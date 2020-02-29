@@ -6,12 +6,13 @@
   <div class="container">
 <div id="app">
 
-<button type="button" class="btn btn-primary" v-on:click="goster">goster</button>
+<button type="button" class="btn btn-primary" v-on:click="goster('ilker')">goster</button>
 <hr>
-<button type="button" class="btn btn-primary" v-on:click="artir">goster</button>
+<button type="button" class="btn btn-primary" v-on:click="artir">artır</button>
+<button type="button" class="btn btn-primary" v-on:click="ucerartir(3)">3'er artır</button>
 {{counter}}
 <hr>
-<p v-on:mousemove="guncelleKordinat"> Kordinatlar:{{x}}  , :{{y}}</p>
+<p v-on:mousemove="guncelleKordinat(2,$event)"> Kordinatlar:{{x}}  , :{{y}}</p>
 
 </div>
 </div>
@@ -31,8 +32,8 @@ y:0
 },
 
 methods:{
-goster:function(){
-alert();
+goster:function(isim){
+alert(isim);
 },
 artir:function()
 {
@@ -40,9 +41,16 @@ artir:function()
 this.counter++;
 
 },
-guncelleKordinat:function(event)
+ucerartir:function(step)
 {
 
+this.counter=this.counter+step;
+
+},
+
+guncelleKordinat:function(step,event)
+{
+  this.counter=this.counter+step;
 this.x=event.clientX;
 this.y=event.clientY;
 
