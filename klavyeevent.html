@@ -16,6 +16,8 @@
 <span v-on:mousemove.stop>burada kordinat çalısmasın</span>
 
 </p>
+<hr>
+<input type="text" v-on:keyup.enter="goster2"></input>
 
 </div>
 </div>
@@ -38,6 +40,11 @@ methods:{
 goster:function(isim){
 alert(isim);
 },
+goster2:function(event){
+alert(event.target.value
+);
+},
+
 artir:function()
 {
 
@@ -58,7 +65,8 @@ this.x=event.clientX;
 this.y=event.clientY;
 
 
-}
+},
+
 
 }
 
