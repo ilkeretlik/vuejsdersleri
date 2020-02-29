@@ -6,9 +6,9 @@
   <div class="container">
 <div id="app">
 
-<input type="text" v-model="name"> 
+<button v-on:click="artir"></button>
 
-<p>{{name}}</p>
+<p>sayaç:{{counter}}</p>
 </div>
 </div>
 
@@ -20,10 +20,17 @@ new Vue({
 
 data:{
 
-name:"ilker",
+counter:0,
 
 },
+methods:{
 
+artir:function() {
+  
+}
+
+
+}
 
 })
 
