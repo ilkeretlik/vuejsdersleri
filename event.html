@@ -13,7 +13,8 @@
 {{counter}}
 <hr>
 <p v-on:mousemove="guncelleKordinat(2,$event)"> Kordinatlar:{{x}}  , :{{y}}</p>
-
+<hr>
+<a :href="link">google</a>
 </div>
 </div>
 
@@ -26,7 +27,8 @@ new Vue({
 data:{
 counter:0,
 x:0,
-y:0
+y:0,
+link:"https://google.com"
 
 
 },
