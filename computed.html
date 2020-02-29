@@ -9,6 +9,7 @@
 <button v-on:click="artir"></button>
 
 <p>sayaç:{{counter}}</p>
+<p>sonuş:{{result}}</p>
 </div>
 </div>
 
@@ -21,12 +22,13 @@ new Vue({
 data:{
 
 counter:0,
+result:""
 
 },
 methods:{
 
 artir:function() {
-  
+  this.result=this.counter>10 ? "10 dan büyük" : "10 dan küçük"
 }
 
 
