@@ -7,14 +7,9 @@
 <div id="app">
 
 
-<p v-if="show">DENEME</p>
-<P v-else>DENEME 22222</P>
-<button v-on:click="show=!show">GOSTER/ GİZLE</button>
+<button @click="show=!show">goster/gizle</button>
 
-<p v-if="sayi>100">100 den büyük</p>
-<p v-else-if="sayi<100"> 100 den küçük</p>
-<p v-else>100 e eşit</p>
-
+<p v-show="show">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora expedita iure exercitationem nemo esse, ut placeat est. Amet quidem dolorum ipsam beatae delectus aut illo perferendis nesciunt est voluptatem! Iste.</p>
  
 
 
