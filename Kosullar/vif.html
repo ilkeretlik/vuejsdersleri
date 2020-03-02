@@ -1,18 +1,20 @@
-<script src="./script/vue.js"></script>
+<script src="../script/vue.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <div class="container">
 <div id="app">
-<h4>v-if
+
+
+<p v-if="show">DENEME</p>
+<P v-else>DENEME 22222</P>
+<button v-on:click="show=!show">GOSTER/ GİZLE</button>
 
 
 
+ 
 
-
-  +9/++-
-</h4>
 
 </div>
 </div>
@@ -23,7 +25,10 @@
 new Vue({
   el:"#app",
 
+data:{
 
+  show:false,
+}
 
 
 })
